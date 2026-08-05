@@ -24,6 +24,9 @@ Funktioner
 -Radera produkt
 
 #Starta projektet
+
+#Status 
+Projektet är klar och testad i Swagger 
 Öppna cleamshop.aln i VS. 
 Kontrollera connection string i appsettings. 
 kör migrationerna.
