@@ -33,3 +33,6 @@ kör migrationerna.
 Starta projektet
 Öppna Swagger för att testa API t. 
 
+#Dokumentation 
+API t dokumenteras & testas med Swagger. 
+
