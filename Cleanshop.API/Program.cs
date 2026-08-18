@@ -19,16 +19,28 @@ namespace Cleanshop.API
 
             // Repository
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             // MediatR
-               builder.Services.AddMediatR(typeof(Cleanshop.Application.Products.Commands.CreateProductCommand).Assembly);
+            builder.Services.AddMediatR(typeof(Cleanshop.Application.Products.Commands.CreateProductCommand).Assembly);
 
             // API
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFronted", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
             var app = builder.Build();
+            app.UseCors("AllowFronted");
 
             if (app.Environment.IsDevelopment())
             {
