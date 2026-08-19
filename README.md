@@ -23,6 +23,11 @@ Funktioner
 -Uppdatera produkt 
 -Radera produkt
 
+#Diagram 
+category 1--- * product * --- 1 supplier
+Category kan ha flera Products.
+En suppliwe kan ha flera products.
+
 #Starta projektet
 
 #Status 
