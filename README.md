@@ -36,3 +36,12 @@ Starta projektet
 #Dokumentation 
 API t dokumenteras & testas med Swagger. 
 
+#Frontend 
+frontend finns i ett seperat Github repo : cleanshop- frontend 
+#starta projektet 
+
+#Starta cleanshop.API i Visual studio och öppnaSwagger 
+starta frontenden seperat med npm run dev. 
+
+
+#
